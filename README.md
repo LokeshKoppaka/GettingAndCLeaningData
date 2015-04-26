@@ -17,3 +17,13 @@ Step 5: Renaming the activity and features data set and binding the these column
 Step 6: Binding test and train data into a single data set.
 
 Step 7: Custome logic inorder to create the average  of each variable for each activity and each subject.
+
+While Running the program please take care of the correct directory path to the data availability.
+
+The Function generateTidyData takes the following parameters.
+
+function(WorkingDirectory, OutputFileName)
+WorkingDirectory -> is the path upto the directory UCI HAR Dataset
+OutputFileName -> is the file name of the Output File.
+
+Sample invoke -> generateTidyData("D:\\lokesh_R_programming\\Getting and cleaning Data\\Assigment_Data","finatTestData")
