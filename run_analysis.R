@@ -7,20 +7,20 @@ generateTidyData <- function(WorkingDirectory, OutputFileName)
     print("Reading.... files ")
     
     # Reading features.txt file containing the features
-    features <- read.table("./Assigment_Data/UCI HAR Dataset/features.txt")
+    features <- read.table("./UCI HAR Dataset/features.txt")
     
     # Reading activity_label file
-    activity_labels <- read.table("./Assigment_Data/UCI HAR Dataset/activity_labels.txt")
+    activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt")
     
     # Reading test Data Files
-    test_data <- read.table("./Assigment_Data/UCI HAR Dataset/test/X_test.txt")
-    test_data_act <- read.table("./Assigment_Data/UCI HAR Dataset/test/y_test.txt")
-    test_data_subject <- read.table("./Assigment_Data/UCI HAR Dataset/test/subject_test.txt")
+    test_data <- read.table("./UCI HAR Dataset/test/X_test.txt")
+    test_data_act <- read.table("./UCI HAR Dataset/test/y_test.txt")
+    test_data_subject <- read.table("./UCI HAR Dataset/test/subject_test.txt")
     
     # Reading Train Data Files 
-    train_data <- read.table("./Assigment_Data/UCI HAR Dataset/train/X_train.txt")
-    train_data_act <- read.table("./Assigment_Data/UCI HAR Dataset/train/y_train.txt")
-    train_data_subject <- read.table("./Assigment_Data/UCI HAR Dataset/train/subject_train.txt")
+    train_data <- read.table("./UCI HAR Dataset/train/X_train.txt")
+    train_data_act <- read.table("./UCI HAR Dataset/train/y_train.txt")
+    train_data_subject <- read.table("./UCI HAR Dataset/train/subject_train.txt")
     
     print("Completed....")
     # filtering the features inorder to extract only mean and std containing features. 
@@ -91,4 +91,5 @@ generateTidyData <- function(WorkingDirectory, OutputFileName)
     }
     colnames(average_tidy_data_set)[1] <- replacelabel
     write.table(average_tidy_data_set,file = "average_tidy_data_set", col.names = TRUE)
+    print("Completed... tidy data set please check your working directory..")
 }
